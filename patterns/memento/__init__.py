@@ -74,4 +74,8 @@ class HistoricCaretaker(Caretaker):
         self.origin.memento = self._history[-1]
         return _pop
 
-__all__ = ['Memento', 'Originator', 'HistoricCaretaker']
+__all__ = [
+    'HistoricCaretaker',
+    'Memento', 
+    'Originator',
+]
