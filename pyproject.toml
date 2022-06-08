@@ -14,6 +14,7 @@ pytest-cov = "^3.0.0"
 guppy3 = "^3.1.2"
 ipython = "^8.4.0"
 pytest-watch = "^4.2.0"
+pytest-mypy = "^0.9.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
