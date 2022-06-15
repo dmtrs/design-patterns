@@ -3,10 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>Rationals - Design patterns</title>
         
-        
-        <base href="/">
         
 
 
@@ -97,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="rationals.html"><strong aria-hidden="true">2.</strong> Rationals</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="rationals.html" class="active"><strong aria-hidden="true">2.</strong> Rationals</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,13 +165,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="rationals"><a class="header" href="#rationals">Rationals</a></h1>
+<p>A revisit of <a href="https://github.com/euruko2013/site/blob/master/build/speakers/presentations/i_see_your_127_32_a_tale_of_rationals-noria.pdf">Xavier Noria, &quot;I See Your 127.32+. A Tale of Rationals&quot;</a></p>
+<h2 id="unsigned-integer-in-python"><a class="header" href="#unsigned-integer-in-python">Unsigned integer in python</a></h2>
+<pre><code>&gt;&gt;&gt; import ctypes
+&gt;&gt;&gt; ctypes.c_ulong(-1).value
+18446744073709551615
+&gt;&gt;&gt; ctypes.c_uint(-1).value
+4294967295
+&gt;&gt;&gt;
+</code></pre>
+<h2 id="numbers-in-python"><a class="header" href="#numbers-in-python">Numbers in python</a></h2>
+<blockquote>
+<p>The <code>numbers</code> module (PEP 3141) defines a hierarchy of numeric abstract base classes which progressively define more operations.
+..
+Class <code>numbers.Rational</code> subtypes <code>Real</code> and adds <code>numerator</code> and <code>denominator</code> properties...</p>
+</blockquote>
+<p>Implementation of abstract <code>numbers.Rational</code> can be found in python module <code>fractions</code>.</p>
+<blockquote>
+<p>The <code>fractions</code> module provides support for rational number arithmetic.</p>
+<p>A Fraction instance can be constructed from a pair of integers, from another rational number, or from a string.</p>
+</blockquote>
+<pre><code>&gt;&gt;&gt; one
+Decimal('1')
+&gt;&gt;&gt; three
+Decimal('3')
+&gt;&gt;&gt; assert three * ( one / three ) == one, 'Thank you Python!'
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AssertionError: Thank you Python!
+</code></pre>
+<h3 id="resources"><a class="header" href="#resources">Resources</a></h3>
+<ul>
+<li><a href="https://github.com/euruko2013/site/blob/master/build/speakers/presentations/i_see_your_127_32_a_tale_of_rationals-noria.pdf">Xavier Noria, &quot;I See Your 127.32+. A Tale of Rationals&quot;</a></li>
+<li><a href="https://kristrev.github.io/programming/2013/06/28/unsigned-integeres-and-python">Unsigned integers and Python</a></li>
+<li><a href="https://stackoverflow.com/questions/20766813/how-to-convert-signed-to-unsigned-integer-in-python#20768199">StackOverflow: How to convert signed to unsigned integer in python</a></li>
+<li><a href="https://docs.python.org/3.10/library/numbers.html?highlight=rational#numbers.Rational">numbers - Numeric abstract base classes</a></li>
+<li><a href="https://github.com/python/cpython/blob/3.10/Lib/fractions.py#L93">Lib/fractions.py</a> implements <code>numbers.Rational</code></li>
+</ul>
+<h3 id="appendix"><a class="header" href="#appendix">Appendix</a></h3>
+<blockquote>
+<p>Complements are used in digital computers in order to simply the subtraction operation and for the logical manipulations. For the Binary number (base-2) system, there are two types of complements: 1’s complement and 2’s complement.</p>
+</blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
 
                         
@@ -184,6 +226,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="chapter_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
 
                 
