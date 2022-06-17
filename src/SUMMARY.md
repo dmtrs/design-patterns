@@ -1,4 +1,4 @@
 # Content
 
 - [Rationals](./rationals.md)
-- [Strategies](./strategies.md)
+- [Strategies](./fintech/trading/strategies.md)
