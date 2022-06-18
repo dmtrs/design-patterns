@@ -1,5 +1,5 @@
 from . import (
-    trading
+    trading,
 )
 
 __all__ = [

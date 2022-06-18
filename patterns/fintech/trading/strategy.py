@@ -1,5 +1,5 @@
 from enum import (
-    Enum
+    Enum,
 )
 
 
@@ -14,13 +14,13 @@ class OCAGroup(Enum):
 
 #from typing import ParamSpec
 from typing import (
-    TypeVar
+    TypeVar,
 )
 
 ParamSpec = TypeVar('ParamSpec')
 
 from decimal import (
-    Decimal
+    Decimal,
 )
 
 Qty = Decimal
@@ -31,7 +31,7 @@ from typing import (
     Callable,
     Optional,
     Sequence,
-    Tuple
+    Tuple,
 )
 
 Order = Tuple[

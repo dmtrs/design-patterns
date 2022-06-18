@@ -1,5 +1,5 @@
 from . import (
-    strategy
+    strategy,
 )
 
 __all__ = [
