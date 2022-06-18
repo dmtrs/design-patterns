@@ -24,6 +24,8 @@ Implementation of abstract `numbers.Rational` can be found in python module `fra
 >
 > A Fraction instance can be constructed from a pair of integers, from another rational number, or from a string.
 
+### Decimal
+
 ```
 >>> one
 Decimal('1')
@@ -35,7 +37,11 @@ Traceback (most recent call last):
 AssertionError: Thank you Python!
 ```
 
-### Resources
+Python's `decimal` module is using [`libmpdec library`](https://www.bytereef.org/mpdecimal/doc/libmpdec/index.html).
+
+`libmpdec` is a fast C library for correctly-rounded arbitrary precision decimal floating point arithmetic. It is a complete implementation of Mike Cowlishaw/IBM's [General Decimal Arithmetic Specification.](https://web.archive.org/web/20220314065530/http://speleotrove.com/decimal/decarith.pdf)
+
+## Resources
 
 - [Xavier Noria, "I See Your 127.32+. A Tale of Rationals"](https://github.com/euruko2013/site/blob/master/build/speakers/presentations/i_see_your_127_32_a_tale_of_rationals-noria.pdf)
 - [Unsigned integers and Python](https://kristrev.github.io/programming/2013/06/28/unsigned-integeres-and-python)
