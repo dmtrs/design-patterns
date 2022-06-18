@@ -3,7 +3,10 @@ from collections import (
 )
 from decimal import Decimal as PrimitiveDecimal
 from typing import (
+    Any,
     Dict,
+    Optional,
+    Union,
 )
 from weakref import (
     WeakValueDictionary,
