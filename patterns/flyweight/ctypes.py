@@ -13,7 +13,7 @@ from . import (
 
 
 class c_ulong(Flyweight):
-    _memory: WeakValueDictionary[Flyweight] = WeakValueDictionary()
+    _memory: WeakValueDictionary[int, Flyweight] = WeakValueDictionary()
 
     def __new__(cls, value: int) -> Any:
         self = super(c_ulong, cls).__new__(cls)
@@ -32,11 +32,11 @@ class c_ulong(Flyweight):
 
 
 class c_uint(Flyweight):
-    _memory: WeakValueDictionary[Flyweight] = WeakValueDictionary()
+    _memory: WeakValueDictionary[int, Flyweight] = WeakValueDictionary()
 
     def __new__(cls, value:int) -> Any:
         self = super(c_uint, cls).__new__(cls)
-        self._c: Any = ctypes.c_uint(value)
+        self._c = ctypes.c_uint(value)
         
         key = hash(self)
         cls._memory[key] = cls._memory.get(key, self)
