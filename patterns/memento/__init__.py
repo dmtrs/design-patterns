@@ -1,15 +1,15 @@
 from abc import (
     ABCMeta,
-    abstractmethod
+    abstractmethod,
 )
 from collections import (
-    deque
+    deque,
 )
 from typing import (
     Deque,
     Iterable,
     Optional,
-    Tuple
+    Tuple,
 )
 
 

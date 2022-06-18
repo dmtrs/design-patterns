@@ -1,11 +1,11 @@
 from abc import (
-    ABCMeta
+    ABCMeta,
 )
 from collections.abc import (
-    Hashable
+    Hashable,
 )
 from typing import (
-    Dict
+    Dict,
 )
 
 

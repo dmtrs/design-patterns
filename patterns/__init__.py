@@ -1,6 +1,6 @@
 from . import (
     flyweight,
-    memento
+    memento,
 )
 
 __all__ = [

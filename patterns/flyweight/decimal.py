@@ -1,16 +1,16 @@
 from collections import (
-    defaultdict
+    defaultdict,
 )
 from decimal import Decimal as PrimitiveDecimal
 from typing import (
-    Dict
+    Dict,
 )
 from weakref import (
-    WeakValueDictionary
+    WeakValueDictionary,
 )
 
 from . import (
-    Flyweight
+    Flyweight,
 )
 
 

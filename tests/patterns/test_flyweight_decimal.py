@@ -1,5 +1,5 @@
 from patterns.flyweight.decimal import (
-    Decimal
+    Decimal,
 )
 
 

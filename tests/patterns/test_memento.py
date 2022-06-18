@@ -1,13 +1,13 @@
 import uuid
 from dataclasses import (
-    dataclass
+    dataclass,
 )
 from typing import (
-    Dict
+    Dict,
 )
 
 from patterns import (
-    memento
+    memento,
 )
 
 
