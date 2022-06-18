@@ -3,7 +3,10 @@ from collections import (
 )
 from decimal import Decimal as PrimitiveDecimal
 from typing import (
+    Any,
     Dict,
+    Optional,
+    Union,
 )
 from weakref import (
     WeakValueDictionary,
@@ -20,8 +23,12 @@ class Decimal(PrimitiveDecimal, Flyweight):
     
 
     # naive implementation
-    def __new__(cls, *args, **kwargs) -> Flyweight:
-        value = super(Decimal, cls).__new__(cls,*args, **kwargs)
+    def __new__(
+        cls,
+        value: Union[int,str,float,PrimitiveDecimal]='0',
+        context: Optional[Any] = None,
+    ) -> Any:
+        value = super(Decimal, cls).__new__(cls, value=value, context=context)
         key = hash(value)
         cls._memory[key] = cls._memory.get(key, value)
         return cls._memory[key]
