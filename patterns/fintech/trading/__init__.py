@@ -1,4 +1,6 @@
-from . import strategy
+from . import (
+    strategy
+)
 
 __all__ = [
     'strategy'
