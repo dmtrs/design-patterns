@@ -39,7 +39,16 @@ AssertionError: Thank you Python!
 
 Python's `decimal` module is using [`libmpdec library`](https://www.bytereef.org/mpdecimal/doc/libmpdec/index.html).
 
-`libmpdec` is a fast C library for correctly-rounded arbitrary precision decimal floating point arithmetic. It is a complete implementation of Mike Cowlishaw/IBM's [General Decimal Arithmetic Specification.](https://web.archive.org/web/20220314065530/http://speleotrove.com/decimal/decarith.pdf)
+`libmpdec` is a fast C library for correctly-rounded arbitrary precision decimal floating point arithmetic. It is a complete implementation of Mike Cowlishaw/IBM's [General Decimal Arithmetic Specification.](http://speleotrove.com/decimal/decarith.html)
+
+### Fraction
+
+#### Divide by zero
+
+Python `fractions.Fraction` will [raises a `ZeroDevisionError`](https://github.com/python/cpython/blob/3.10/Lib/fractions.py#L155-L156) if `denominator == 0` when this could be thinked as ∞.
+> We will now construct the SternBrocot tree in steps beginning with the two fractions 0/1 and 1/0. You may worry that 1/0 does not define a rational number, but, as we'll see, it will be convenient for us to think about this as representing infinity.
+More on the SternBrocot tree [here](./sternbrocot-tree.md')
+
 
 ## Resources
 
@@ -48,6 +57,7 @@ Python's `decimal` module is using [`libmpdec library`](https://www.bytereef.org
 - [StackOverflow: How to convert signed to unsigned integer in python](https://stackoverflow.com/questions/20766813/how-to-convert-signed-to-unsigned-integer-in-python#20768199)
 - [numbers - Numeric abstract base classes](https://docs.python.org/3.10/library/numbers.html?highlight=rational#numbers.Rational)
 - [Lib/fractions.py](https://github.com/python/cpython/blob/3.10/Lib/fractions.py#L93) implements `numbers.Rational`
+- [Trees, Teeth, and Time: The mathematics of clock making](https://gaurish4math.files.wordpress.com/2016/10/feature-column-from-the-ams.pdf)
 
 ### Appendix
 

@@ -1,11 +1,14 @@
 from collections import (
     defaultdict,
 )
+from decimal import Context as DecimalContext
 from decimal import Decimal as PrimitiveDecimal
 from typing import (
     Any,
     Dict,
     Optional,
+    Tuple,
+    TypeVar,
     Union,
 )
 from weakref import (
@@ -16,6 +19,13 @@ from . import (
     Flyweight,
 )
 
+DecimalValue = Union[
+    int,
+    str,
+    float,
+    PrimitiveDecimal,
+    Tuple[int, Tuple[int], int],
+]
 
 # move from PrimitiveDecimal -> T and Decimal to Flyweight
 class Decimal(PrimitiveDecimal, Flyweight):
@@ -25,10 +35,14 @@ class Decimal(PrimitiveDecimal, Flyweight):
     # naive implementation
     def __new__(
         cls,
-        value: Union[int,str,float,PrimitiveDecimal]='0',
-        context: Optional[Any] = None,
+        value: DecimalValue='0',
+        context: Optional[DecimalContext] = None,
     ) -> Any:
-        value = super(Decimal, cls).__new__(cls, value=value, context=context)
+        value = super(Decimal, cls).__new__(
+            cls,
+            value=value,
+            context=context
+        )
         key = hash(value)
         cls._memory[key] = cls._memory.get(key, value)
         return cls._memory[key]
