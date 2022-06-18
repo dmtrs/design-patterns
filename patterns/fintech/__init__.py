@@ -1,4 +1,6 @@
-from . import trading
+from . import (
+    trading
+)
 
 __all__ = [
     'trading',

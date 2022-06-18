@@ -1,4 +1,6 @@
-from enum import Enum
+from enum import (
+    Enum
+)
 
 
 class Direction(Enum):
@@ -11,16 +13,26 @@ class OCAGroup(Enum):
   NONE: bytes = b'none'
 
 #from typing import ParamSpec
-from typing import TypeVar
+from typing import (
+    TypeVar
+)
 
 ParamSpec = TypeVar('ParamSpec')
 
-from decimal import Decimal
+from decimal import (
+    Decimal
+)
 
 Qty = Decimal
 Price = Decimal
 
-from typing import AnyStr, Callable, Optional, Sequence, Tuple
+from typing import (
+    AnyStr,
+    Callable,
+    Optional,
+    Sequence,
+    Tuple
+)
 
 Order = Tuple[
   Sequence[AnyStr], # id
