@@ -1,10 +1,17 @@
+from collections import (
+    defaultdict
+)
 from decimal import Decimal as PrimitiveDecimal
-from weakref import WeakValueDictionary
+from typing import (
+    Dict
+)
+from weakref import (
+    WeakValueDictionary
+)
 
-from collections import defaultdict
-from typing import Dict
-
-from . import Flyweight
+from . import (
+    Flyweight
+)
 
 
 # move from PrimitiveDecimal -> T and Decimal to Flyweight

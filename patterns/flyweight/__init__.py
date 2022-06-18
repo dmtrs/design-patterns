@@ -1,7 +1,12 @@
-from collections.abc import Hashable
-from typing import Dict
-from abc import ABCMeta
-
+from abc import (
+    ABCMeta
+)
+from collections.abc import (
+    Hashable
+)
+from typing import (
+    Dict
+)
 
 
 # TODO: look into https://docs.python.org/3/library/weakref.html

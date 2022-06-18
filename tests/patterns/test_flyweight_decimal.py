@@ -1,4 +1,7 @@
-from patterns.flyweight.decimal import Decimal
+from patterns.flyweight.decimal import (
+    Decimal
+)
+
 
 def test_is() -> None:
     assert Decimal(1) is Decimal(1.0) and not None

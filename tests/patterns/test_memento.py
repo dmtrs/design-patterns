@@ -1,8 +1,14 @@
 import uuid
-from typing import Dict        
-from dataclasses import dataclass
+from dataclasses import (
+    dataclass
+)
+from typing import (
+    Dict
+)
 
-from patterns import memento
+from patterns import (
+    memento
+)
 
 
 class TestMemento:

@@ -1,6 +1,7 @@
-from . import flyweight
-from . import memento
-
+from . import (
+    flyweight,
+    memento
+)
 
 __all__ = [
     'flyweight',

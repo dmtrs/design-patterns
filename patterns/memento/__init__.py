@@ -1,12 +1,16 @@
-from typing import Deque
-from typing import Optional
-from typing import Iterable
-from typing import Tuple
-
-from abc import ABCMeta
-from abc import abstractmethod
-
-from collections import deque
+from abc import (
+    ABCMeta,
+    abstractmethod
+)
+from collections import (
+    deque
+)
+from typing import (
+    Deque,
+    Iterable,
+    Optional,
+    Tuple
+)
 
 
 class Memento:
