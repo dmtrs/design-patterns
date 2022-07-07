@@ -27,13 +27,11 @@ class Memento:
 
 class Originator(metaclass=ABCMeta):
     @property
-    @abstractmethod
     def _state(self) -> Memento.State:
         "returns state"
 
     @_state.setter
-    @abstractmethod
-    def _state(self, state: Memento.State):
+    def _state(self, state: Memento.State) -> None:
         "sets state"
 
     @property
@@ -41,7 +39,7 @@ class Originator(metaclass=ABCMeta):
         return Memento(self._state)
 
     @memento.setter
-    def memento(self, m: Memento):
+    def memento(self, m: Memento) -> None:
         self._state = m.state
 
 
@@ -50,7 +48,7 @@ class Caretaker():
         self.origin = origin
 
 class HistoricCaretaker(Caretaker):
-    def __init__(self, origin: Originator, history: Optional[Iterable[Memento]] = None):
+    def __init__(self, origin: Originator, history: Optional[Iterable[Memento]] = None) -> None:
         super().__init__(origin)
         self._history: Deque[Memento] = deque()
         for m in (history or []):
